@@ -4,11 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 统一在不同浏览器上css的样式
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 移动端有1像素边框的问题 高清手机一像素边框会在高清手机上显示两个像素
-import './assets/styles/border.css'
+import 'styles/border.css'
 // 移动端中有300毫秒点击延迟的问题，用fastclick来解决
 import fastClick from 'fastclick'
+// 因为iconfont几乎在每个目录下都要引用，所以放在这里
+import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
 // 这样就正确使用了fastclick解决了移动端点击事件300毫秒延迟的问题
