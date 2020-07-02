@@ -9,12 +9,16 @@ import 'styles/reset.css'
 import 'styles/border.css'
 // 移动端中有300毫秒点击延迟的问题，用fastclick来解决
 import fastClick from 'fastclick'
+// 这是轮播图的插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 因为iconfont几乎在每个目录下都要引用，所以放在这里
 import 'styles/iconfont.css'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 // 这样就正确使用了fastclick解决了移动端点击事件300毫秒延迟的问题
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 /* 定义了一个vue的根实例，挂载在id=app的元素上 */
 new Vue({
