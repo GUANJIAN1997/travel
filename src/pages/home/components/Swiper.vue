@@ -1,4 +1,3 @@
-// 单文件组件由三部分组成template，script，style
 <template>
   <div class="wrapper">
     <swiper :options="swiperOption">

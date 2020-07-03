@@ -2,6 +2,7 @@
 <div>
   <home-header></home-header>
   <home-swiper></home-swiper>
+  <home-icons></home-icons>
 <!-- <div class="home">home</div> -->
 <!-- 做页面跳转在vue中一般不使用a标签，一般用router-link标签 -->
 <!-- <router-link to="/list" class="home">列表页</router-link> -->
@@ -12,6 +13,7 @@
 // 引入进来HomeHeader了（这是一个局部组件）下面要使用这个组件
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
+import HomeIcons from './components/Icons'
 /* 导出一个对象 */
 export default {
 /* 组件的名字 */
@@ -19,7 +21,8 @@ export default {
 // 声明这个局部组件，注册到home组件
   components: {
   	HomeHeader,
-  	HomeSwiper
+  	HomeSwiper,
+  	HomeIcons
   }
 }
 </script>
