@@ -8,10 +8,12 @@
     <span class="iconfont">&#xe632;</span>
     输入城市/景点/游玩主题
   </div>
-  <div class="header-right">
-    {{city}}
-    <span class="iconfont arrow-icon">&#xe6e0;</span>
-  </div>
+  <router-link to="/city">
+    <div class="header-right">
+      {{city}}
+      <span class="iconfont arrow-icon">&#xe6e0;</span>
+    </div>
+  </router-link>
 <!-- <div class="home">home</div> -->
 <!-- 做页面跳转在vue中一般不使用a标签，一般用router-link标签 -->
 <!-- <router-link to="/list" class="home">列表页</router-link> -->
@@ -36,7 +38,7 @@ export default {
   @import '~styles/varibles.styl'
   .header
     display: flex
-    line-height: .86rem
+    line-height: $headerHeight
     background: $bgColor
     color: #fff
     .header-left
@@ -59,6 +61,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: -.04rem
         font-size: .24rem
