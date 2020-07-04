@@ -3,6 +3,8 @@
   <home-header></home-header>
   <home-swiper></home-swiper>
   <home-icons></home-icons>
+  <home-recommend></home-recommend>
+  <home-weekend></home-weekend>
 <!-- <div class="home">home</div> -->
 <!-- 做页面跳转在vue中一般不使用a标签，一般用router-link标签 -->
 <!-- <router-link to="/list" class="home">列表页</router-link> -->
@@ -14,6 +16,8 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HomeRecommend from './components/Recommend'
+import HomeWeekend from './components/Weekend'
 /* 导出一个对象 */
 export default {
 /* 组件的名字 */
@@ -22,7 +26,9 @@ export default {
   components: {
   	HomeHeader,
   	HomeSwiper,
-  	HomeIcons
+  	HomeIcons,
+  	HomeRecommend,
+    HomeWeekend
   }
 }
 </script>
