@@ -12,6 +12,7 @@ import fastClick from 'fastclick'
 // 这是轮播图的插件
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 因为iconfont几乎在每个目录下都要引用，所以放在这里
+import store from './store'
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
@@ -24,6 +25,7 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
