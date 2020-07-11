@@ -41,7 +41,10 @@ export default {
   },
   activated() {
     window.addEventListener('scroll', this.handleScroll)//加一个监听事件 如果scroll执行了就执行 handleScroll
-  }
+  },
+  deactivated() {
+    window.removeEventListener('scroll', this.handleScroll) //对全局事件的解绑
+  }//用keepalive之后新增加的生命周期钩子，页面即将被替换（隐藏）时候执行
 }
 </script>
 
