@@ -25,8 +25,9 @@ export default {
     }
   },
   methods: {
-    handleScroll () {
-      const top =  document.documentElement.scrollTop
+    handleScroll () { 
+      const top =  document.documentElement.scrollTop || document.body.scrollTop || window.pageYOffset
+      //有的手机浏览器不兼容这个语句 下面来做一个兼容性处理
       if (top > 60) {
         let opacity = top/140
         opacity =opacity > 1 ? 1 : opacity
@@ -39,12 +40,12 @@ export default {
       }
     }
   },
-  activated() {
+  mounted() {
     window.addEventListener('scroll', this.handleScroll)//加一个监听事件 如果scroll执行了就执行 handleScroll
   },
-  deactivated() {
+  destroyed() {
     window.removeEventListener('scroll', this.handleScroll) //对全局事件的解绑
-  }//用keepalive之后新增加的生命周期钩子，页面即将被替换（隐藏）时候执行
+  }//页面即将被替换（隐藏）时候执行
 }
 </script>
 
