@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
     "better-scroll": "^1.15.2",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
